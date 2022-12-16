@@ -3,7 +3,7 @@
     "view": {
 		"kind":"form",
 		"properties": {
-			"title": "Analytics end-to-end with Azure Synapse - Deployment Accelerator",
+			"title": "Analytics end-to-end with Azure Synapse - Deployment Accelerator New",
 			"steps": [
 				{
                     "name": "basics",
