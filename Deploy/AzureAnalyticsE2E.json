@@ -479,10 +479,7 @@
     "purviewPSScriptLocation": "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0F6dXJlL2F6dXJlLXN5bmFwc2UtYW5hbHl0aWNzLWVuZDJlbmQvbWFpbi9EZXBsb3kvc2NyaXB0cy9QdXJ2aWV3UG9zdERlcGxveS5wczE=",
     "datalakeAccountPurviewParams": "[format('-WorkspaceDataLakeAccountName {0} -RawDataLakeAccountName {1} -CuratedDataLakeAccountName {2}', parameters('workspaceDataLakeAccountName'), parameters('rawDataLakeAccountName'), parameters('curatedDataLakeAccountName'))]",
     "cleanUpPSScriptLocation": "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0F6dXJlL2F6dXJlLXN5bmFwc2UtYW5hbHl0aWNzLWVuZDJlbmQvbWFpbi9EZXBsb3kvc2NyaXB0cy9DbGVhblVwUG9zdERlcGxveS5wczE=",
-    "cleanUpScriptArguments": "[format('-UAMIResourceID {0}', resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', variables('deploymentScriptUAMIName')))]",
-    "purviewConfig" : {
-            "purviewResourceId": "[parameters('purviewAccountID')]"
-        }
+    "cleanUpScriptArguments": "[format('-UAMIResourceID {0}', resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', variables('deploymentScriptUAMIName')))]"
   },
   "resources": [
     {
@@ -833,7 +830,10 @@
             "privateContainerNames": [
               "[parameters('dataLakeSandpitZoneName')]",
               "[parameters('synapseDefaultContainerName')]"
-            ]
+            ],
+            "purviewConfig" : {
+              "purviewResourceId": "[parameters('purviewAccountID')]"
+            }
           },
           "resources": [
             {
