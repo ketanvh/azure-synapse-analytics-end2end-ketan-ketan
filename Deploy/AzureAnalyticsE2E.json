@@ -737,6 +737,9 @@
           },
           "synapseWorkspaceName": {
             "value": "[parameters('synapseWorkspaceName')]"
+          },
+          "ctrlDeployPurview" : {
+            "value" : "[parameters('ctrlDeployPurview')]"
           }
         },
         "template": {
@@ -821,6 +824,9 @@
             },
             "purviewAccountID": {
               "type": "string"
+            },
+            "ctrlDeployPurview" : {
+              "type" : "bool"
             }
           },
           "variables": {
